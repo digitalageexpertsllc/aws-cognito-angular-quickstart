@@ -8,7 +8,7 @@ I've modified this cognito-quick-start with a few improvements. Note that this w
 * Don't use the `isLoggedIn` interface (I plan to remove it later). Instead, use the auth-guard and put it in your router
   * Why? Further decouples the rest of the application from authorization. Components should have no concept of users or whether someone is logged in. This decision should be made at the router level. 
 
-
+If this project is used correctly, you should be able to clone it into an existing project, and only modify the `app-routing.module.ts` file to get it working initially. 
 
 
 Cognito Quickstart
