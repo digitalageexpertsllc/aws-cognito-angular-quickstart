@@ -1,0 +1,29 @@
+body.home-body {
+    background: url(../../../assets/img/intro-bg.jpg) no-repeat center center;    
+}
+
+::ng-deep .intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #0d6aad;
+    width: 50%;
+    margin-left: 25%;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+
+.navbar-brand img {
+    height:60px;
+    display: inline-block;
+}
+
+.navbar-brand {
+    height:auto !important;
+}
+
+.navbar {
+    border-bottom:1px #e7e7e7 solid;
+}

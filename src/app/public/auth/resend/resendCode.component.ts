@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
-import {UserRegistrationService} from "../../../service/user-registration.service";
-import {CognitoCallback} from "../../../service/cognito.service";
 import {Router} from "@angular/router";
+import { CognitoCallback } from "../../services/cognito.service";
+import { UserRegistrationService } from "../../services/user-registration.service";
 @Component({
     selector: 'awscognito-angular2-app',
     templateUrl: './resendCode.html'

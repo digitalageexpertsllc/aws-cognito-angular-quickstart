@@ -1,0 +1,15 @@
+form.form-signin {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    color: #0d6aad;
+    width: 100%;
+    margin-left: 0px;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.95;
+}
+
+mat-form-field {
+    width: 100%;
+}

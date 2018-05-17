@@ -1,0 +1,114 @@
+<form class="form-signin" [formGroup]="userForm" novalidate style="background: white">
+  <div class="form-group">
+    <h2>Create account</h2>
+  </div>
+  <div class="row" *ngIf="errorMessage!=null">
+    <div class="col-sm-12">
+      <div class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h5>Login Details</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-form-field>
+        <input matInput placeholder="E-mail" [(ngModel)]="registrationUser.email" formControlName="email" required>
+        <mat-error *ngIf="userForm.get('email').invalid">{{getErrorMessage(userForm.get('email'))}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="registrationUser.password" formControlName="password"
+          required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h5>User Information</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="First Name" [(ngModel)]="registrationUser.name" formControlName="firstName" required>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="Middle Initial" [(ngModel)]="registrationUser.middleInitial" formControlName="middleInitial">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="Last Name" [(ngModel)]="registrationUser.familyName" formControlName="lastName" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 20px">
+    <div class="col-sm-6">
+      <mat-form-field>
+        <input matInput placeholder="Phone #" [(ngModel)]="registrationUser.phone" formControlName="phone">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field>
+        <input matInput placeholder="Industry" [(ngModel)]="registrationUser.industry" formControlName="industry">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+      <h5>User Address</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <mat-form-field style="width:100%">
+        <input matInput placeholder="Address 1" [(ngModel)]="registrationUser.address" formControlName="address1" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <mat-form-field style="width:100%">
+        <input matInput placeholder="Address 2" [(ngModel)]="registrationUser.address2" formControlName="address2">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="City" [(ngModel)]="registrationUser.city" formControlName="city" required>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="State" [(ngModel)]="registrationUser.state" formControlName="state" required>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-4">
+      <mat-form-field>
+        <input matInput placeholder="Zip" [(ngModel)]="registrationUser.zip" formControlName="zip" required>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <button mat-button [disabled]="userForm.invalid" (click)="onRegister()" 
+      type="submit" class="btn btn-primary" style="color: white">
+        Create Account
+      </button>
+    </div>
+    <div class="col-sm-6">
+      Already have an account?
+      <a [routerLink]="['/home/login']">
+        <i class="fa fa-fw fa-lock"></i>Login</a>
+    </div>
+  </div>
+</form>

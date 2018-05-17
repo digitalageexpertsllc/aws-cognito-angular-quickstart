@@ -1,3 +1,16 @@
+# DAE
+I've modified this cognito-quick-start with a few improvements. Note that this was a quick copy-paste from an existing project where I made the changes, so we may need to clean this forked project up a bit. 
+
+* Wrapped Callbacks with Observables
+  * Why? rxjs observables are paramount to Angular. Angular tries to prevent callback-hell, and the tight coupling that results from it. 
+* Added http-interceptor to pass authorization tokens 
+  * Why? Services should not be aware of the auth layer. This further decouples the rest of the application from auth. 
+* Don't use the `isLoggedIn` interface (I plan to remove it later). Instead, use the auth-guard and put it in your router
+  * Why? Further decouples the rest of the application from authorization. Components should have no concept of users or whether someone is logged in. This decision should be made at the router level. 
+
+
+
+
 Cognito Quickstart
 ===================================================
 
